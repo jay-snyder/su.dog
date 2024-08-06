@@ -1,0 +1,124 @@
+/* WEB FONT */
+
+@font-face {
+    font-family: 'Audimat-Mono';
+    src: url('../font/Audimat-Mono.ttf.woff') format('woff'),
+        url('../font/Audimat-Mono.ttf.svg#Audimat-Mono') format('svg'),
+        url('../font/Audimat-Mono.ttf.eot'),
+        url('../font/Audimat-Mono.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ANIMATIONS */
+
+@keyframes blink {
+    0% {
+        visibility: hidden;
+    }
+}
+
+/* TERMINAL COLORS */
+
+.color0 {
+    color: #2d2d2d;
+}
+
+.color8 {
+    color: #747369;
+}
+
+.color1 {
+    color: #f2777a;
+}
+
+.color2 {
+    color: #99cc99;
+}
+
+.color3 {
+    color: #ffcc66;
+}
+
+.color4 {
+    color: #6699cc;
+}
+
+.color5 {
+    color: #cc99cc;
+}
+
+.color6 {
+    color: #66cccc;
+}
+
+.color7 {
+    color: #d3d0c8;
+}
+
+.color15 {
+    color: #f2f0ec;
+}
+
+/* RULES */
+
+* {
+    font-family: 'Audimat-Mono', monospace;
+}
+
+header {
+    margin-bottom: 32pt;
+}
+
+header img {
+    width: 34px;
+    padding-right: 5px;
+    position: relative;
+    top: 5px;
+}
+
+body {
+    background-color: #2d2d2d;
+    color: #d3d0c8;
+    margin: 32pt;
+    max-width: 80ch;
+}
+
+footer {
+    font-size: 9pt;
+    margin-top: 32pt;
+}
+
+a {
+    color: #66cccc;
+    text-underline-offset: 2pt;
+}
+
+a.ko-fi {
+    color: #99cc99;
+}
+
+h1 {
+    font-size: 32pt;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+}
+
+h2 {
+    font-size: inherit;
+    margin-bottom: 0pt;
+    font-weight: normal;
+}
+
+.blink {
+    animation: blink 1s 1.5s steps(2) infinite;
+}
+
+.dim {
+    opacity: 30%;
+}
+
+.indent {
+    margin-left: 5ch;
+    margin-top: 2pt;
+}

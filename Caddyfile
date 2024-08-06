@@ -1,0 +1,7 @@
+su.dog {
+    root * /usr/share/caddy
+    file_server
+    log {
+        output stdout
+    }
+}
