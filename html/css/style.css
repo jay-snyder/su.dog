@@ -72,7 +72,7 @@ header {
 
 header img {
     width: 34px;
-    padding-right: 5px;
+    padding-right: 8px;
     position: relative;
     top: 5px;
 }
@@ -121,4 +121,10 @@ h2 {
 .indent {
     margin-left: 5ch;
     margin-top: 2pt;
+}
+
+.error {
+    margin: 0 0 0 42px;
+    font-size: 100pt;
+    color: #f2777a;
 }
