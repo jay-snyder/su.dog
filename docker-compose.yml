@@ -9,11 +9,23 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - caddy-config:/config
-      - caddy-data:/data
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./html:/usr/share/caddy:ro
+      - ./certs:/root/certs:ro
+    networks:
+      - web
+    depends_on:
+      - flask
 
-volumes:
-  caddy-config:
-  caddy-data:
+  flask:
+    container_name: flask
+    restart: unless-stopped
+    build:
+      context: app
+      target: builder
+    stop_signal: SIGINT
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
