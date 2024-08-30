@@ -12,7 +12,7 @@ def about_the_author():
 
 @app.errorhandler(404)
 def page_not_found(_error):
- return render_template('errors/404.html'), 404
+	return render_template('errors/404.html'), 404
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=8000)

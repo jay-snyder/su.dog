@@ -1,6 +1,4 @@
 su.dog.localhost {
-    root * /usr/share/caddy
-
     reverse_proxy /* flask:8000
 
     tls /root/certs/su.dog.localhost.pem /root/certs/su.dog.localhost-key.pem

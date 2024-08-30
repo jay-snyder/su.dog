@@ -1,12 +1,9 @@
-# syntax=docker/dockerfile:1.4
-FROM python:3.11-alpine AS builder
+FROM python:3.11-alpine
 
 WORKDIR /app
-
-COPY requirements.txt /app
-RUN pip install -r requirements.txt
-
 COPY . /app
+
+RUN pip install -r requirements.txt
 
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
