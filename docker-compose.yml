@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   caddy:
     container_name: sudog-caddy
@@ -10,7 +8,6 @@ services:
       - '443:443'
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./certs:/root/certs:ro
     networks:
       - web
     depends_on:
@@ -22,6 +19,8 @@ services:
     build:
       context: app
     stop_signal: SIGINT
+    volumes:
+      - ./app:/app:ro
     networks:
       - web
 
